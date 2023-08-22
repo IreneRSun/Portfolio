@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+    <!-- metadata -->
+    <head>
+        <title>Online Portfolio - Irene Sun</title>
+        <meta charset = "UTF-8">
+        <meta name = "description" content = "Personal Webpage">
+        <meta name = "author" content = "Irene Sun">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href = "style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <!-- content -->
+    <body>
+
+        <!-- navigation menu -->
+        <nav>
+            <a href = "#about" class="material-symbols-outlined">
+                person
+                <span class="label">About</span>
+            </a>
+            <a href = "#skillsets" class="material-symbols-outlined">
+                engineering
+                <span>Skillsets</span>
+            </a>
+            <a href = "#projects" class="material-symbols-outlined">
+                deployed_code
+                <span>Projects</span>
+            </a>
+            <a href = "#contact" class="material-symbols-outlined">
+                contact_mail
+                <span>Contact</span>
+            </a>
+        </nav>
+
+        <!-- about page -->
+        <section id = "about">
+            <div class="section-main centered courier-new luminescent-white">
+                <div class="nowrap">Nice to meet you.</div>
+                I'm Irene, a
+                <div class="typed-text-container">
+                    <div class="typed-text nowrap" style="--word-count: 18;">Software Developer</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- skillsets page -->
+        <section id = "skillsets">
+            <div id="matrix">
+                <canvas></canvas>
+            </div>
+
+            <div class = "section-main centered luminescent-white poiret">
+                Proficient in <br/>
+                <ul>
+                    <li>Python</li>
+                    <li>C/C++</li>
+                    <li>C#</li>
+                    <li>Java</li>
+                    <li>Javascript</li>
+                    <li>Julia</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>SQL</li>
+                    <li>MongoDB</li>
+                    <li>Firebase Firestore</li>
+                    <li>ASP.NET Core</li>
+                    <li>Object Oriented Programming</li>
+                    <li>Data Structures</li>
+                    <li>Algorithms</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- projects page -->
+        <section id = "projects">
+            <div class="carousel">
+                
+                <div class="card">
+                    <div class="circle" style="--bg-color-1: #c9caff; --bg-color-2: #a093ff;"></div>
+                    <div class="content poiret">
+                        <h2>Bug Tracker</h2>
+                        <p>
+                            This bug tracking website is a personal project I worked on over the summer.
+                            It uses the ASP.NET Core framework and C#.
+                        </p>
+                        <a href="https://github.com/IreneRSun/BugTracker" style="--color: #a093ff;">Check It Out</a>
+                    </div>
+                    <img src="assets/BugTracker.png" />
+                </div>
+    
+                <div class="card">
+                    <div class="circle" style="--bg-color-1: #fcd39a; --bg-color-2: #fcb69f;"></div>
+                    <div class="content poiret">
+                        <h2>Weather Web App</h2>
+                        <p>
+                            This unique weather web application uses HTML, CSS, and Javascript to visually tell the weather.
+                        </p>
+                        <a href="https://github.com/IreneRSun/CatInTheCity" style="--color: #fcb69f;">Check It Out</a>
+                    </div>
+                    <img src="assets/WeatherApp.png" />
+                </div>
+    
+                <div class="card">
+                    <div class="circle" style="--bg-color-1: #a8fc41; --bg-color-2: #6ebc18;"></div>
+                    <div class="content poiret">
+                        <h2>QR Mobile App</h2>
+                        <p>
+                            This is a mobile Android game where users scan QR codes competitively.
+                            This was a group project made using Android Studio.
+                        </p>
+                        <a href="https://github.com/CMPUT301W23T09/QRHunter" style="--color: #6ebc18;">Check It Out</a>
+                    </div>
+                    <img src="assets/QRHunter.png" />
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- contact page -->
+        <section id = "contact">
+            <ul class="times-new-roman">
+                <li>
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                    <p class="centered">IreneRSun</p>
+                </li>
+                <li>
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <p class="centered">587-357-1506</p>
+                </li>
+                <li>
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <p class="centered">irene.rsun
+                        @gmail.com</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- javascript scripts -->
+        <script src = "matrix.js"></script>
+        <script src = "site.js"></script>
+        
+    </body>
+
+</html>
