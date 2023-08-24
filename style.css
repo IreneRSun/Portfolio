@@ -220,73 +220,27 @@ section:target, section.active {
 }
 
 /** wheel of skills */
-@keyframes wheel {
-    0% {
-        transform: translateY(-1400%);
-    }
-    6.67% {
-        transform: translateY(-1300%);
-    }
-    13.33% {
-        transform: translateY(-1200%);
-    }
-    20% {
-        transform: translateY(-1100%);
-    }
-    26.67% {
-        transform: translateY(-1000%);
-    }
-    33.33% {
-        transform: translateY(-900%);
-    }
-    40% {
-        transform: translateY(-800%);
-    }
-    46.67% {
-        transform: translateY(-700%);
-    }
-    53.33% {
-        transform: translateY(-600%);
-    }
-    60% {
-        transform: translateY(-500%);
-    }
-    66.67% {
-        transform: translateY(-400%);
-    }
-    73.33%  {
-        transform: translateY(-300%);
-    }
-    80% {
-        transform: translateY(-200%);
-    }
-    86.67% {
-        transform: translateY(-100%);
-    }
-    93.33% {
-        transform: translateY(0%);
-    }
-    100% {
-        transform: translateY(80%);
-    }
-}
-
 #skillsets ul {
-    position: relative;
-    width: 100%;
-    height: 90px;
+    width: 50vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
     list-style: none;
-    overflow: hidden;
 }
 
 #skillsets ul li {
-    width: 100%;
-    white-space: nowrap;
-    animation: wheel 30s ease-in-out infinite;
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 600;
+    margin: 10px;
+    background: transparent;
+    filter: blur(0.5px);
+    text-decoration: underline overline white;
 }
 
-#skillsets ul:hover li {
-    animation-play-state: paused;
+#skillsets ul li:hover {
     filter: blur(0px);
 }
 
@@ -521,11 +475,25 @@ section:target, section.active {
 @media (max-width: 800px) {
     .section-main, 
     .fluctuating-fragments [class^="frag"], .fluctuating-fragments .text, 
+    #matrix,
+    #skillsets ul,
     .card,
     #contact ul {
         position: absolute;
         top: 50%;
         left: 0;
         transform: translateY(-50%);
+    }
+
+    #matrix {
+        width: 100vw;
+    }
+
+    #skillsets ul {
+        width: 90vw;
+    }
+
+    #skillsets ul li {
+        font-size: 30px;
     }
 }
