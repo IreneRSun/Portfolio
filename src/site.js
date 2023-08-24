@@ -9,7 +9,8 @@ function removeActive(element) {
 
 // site logic
 window.onload = function() {
-    // Handle site's visible page
+    // Handle site's initial page
+    const default_page = document.getElementById("home");
     const navbar = document.querySelector("nav");
     navbar.addEventListener("click", () => {
         removeActive(default_page);
@@ -29,12 +30,12 @@ window.onload = function() {
 
             // update the slides
             let shift = (index) * -100;
-            carousel_slides.forEach((element) => {
-                element.style.transform = `translateX(${shift}%)`;
+            carousel_slides.forEach((slide) => {
+                slide.style.transform = `translateX(${shift}%)`;
             })
         })
     });
 
-    // set the first 
+    // set the first index to be active
     addActive(carousel_indexes[0]);
 }
