@@ -381,7 +381,6 @@ section:target, section.active {
     left: 50%;
     transform: translate(-50%, -50%);
     height: 200px;
-    pointer-events: none;
     transition: 1s;
 }
 
@@ -516,4 +515,17 @@ section:target, section.active {
 .font-larger-500 {
     font-size: larger;
     font-weight: 500;
+}
+
+/** content on mobile devices */
+@media (max-width: 800px) {
+    .section-main, 
+    .fluctuating-fragments [class^="frag"], .fluctuating-fragments .text, 
+    .card,
+    #contact ul {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
 }
