@@ -183,7 +183,8 @@ section:target, section.active {
 }
 
 .fluctuating-fragments .text {
-    width: calc(var(--content-width) - 200px);
+    width: calc(var(--content-width));
+    padding: 100px;
 }
 
 .fluctuating-fragments [class^="frag"] {
@@ -503,11 +504,11 @@ section:target, section.active {
 /** content on mobile devices */
 @media (max-width: 800px) {
     .section-main, 
+    .fluctuating-fragments,
     .fluctuating-fragments [class^="frag"], .fluctuating-fragments .text, 
     #matrix,
     #skillsets ul,
-    .card,
-    #contact ul {
+    .card {
         position: absolute;
         top: 50%;
         left: 0;
@@ -524,5 +525,17 @@ section:target, section.active {
 
     #skillsets ul li {
         font-size: 30px;
+    }
+
+    #contact ul {
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #contact ul li {
+        margin: 15px;
     }
 }
