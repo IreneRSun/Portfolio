@@ -63,6 +63,7 @@ section {
     align-items: center;
     transition: ease-in-out 0.5s;
     opacity: 0;
+    background: linear-gradient(180deg, rgba(123,122,122,1) 0%, rgba(47,47,47,1) 100%);
 }
 
 section:target, section.active {
