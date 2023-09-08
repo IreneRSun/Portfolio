@@ -236,29 +236,30 @@ section {
 }
 
 @keyframes border-spin {
-    0%, 100% {
-        border-right: 1px groove rgba(0,0,0,0.3);
-        border-bottom: 1px groove rgba(0,0,0,0.3);
+    0% {
+        border-right: 1px groove rgba(127,134,200,0.3);
+        border-bottom: 1px groove rgba(127,134,200,0.3);
     }
     25% {
-        border-bottom: 1px groove rgba(0,0,0,0.3);
-        border-left: 1px groove rgba(0,0,0,0.3);
+        border-bottom: 1px groove rgba(127,134,200,0.3);
+        border-left: 1px groove rgba(127,134,200,0.3);
     }
     50% {
-        border-left: 1px groove rgba(0,0,0,0.3);
-        border-top: 1px groove rgba(0,0,0,0.3);
+        border-left: 1px groove rgba(76,103,151,0.3);
+        border-top: 1px groove rgba(76,103,151,0.3);
     }
     75% {
-        border-top: 1px groove rgba(0,0,0,0.3);
-        border-right: 1px groove rgba(0,0,0,0.3);
+        border-top: 1px groove rgba(25,72,101,0.3);
+        border-right: 1px groove rgba(25,72,101,0.3);
+    }
+    100% {
+        border-bottom: 1px groove rgba(25,72,101,0.3);
     }
 }
 
 #skills #carousel-container #carousel .side:hover span {
     border: 1px groove transparent;
-    border-right: 1px groove rgba(0,0,0,0.2);
-    border-bottom: 1px groove rgba(0,0,0,0.2);
-    animation: border-spin 0.5s 1 linear;
+    animation: border-spin 1s 1 linear;
 }
 
 /** projects section */
@@ -267,7 +268,9 @@ section {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
 }
 
 #projects #projects-container .project {
@@ -275,9 +278,6 @@ section {
     --proj-height: 60vh;
 
     position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
     width: var(--proj-width);
     height: var(--proj-height);
     border-radius: 10px;
@@ -285,18 +285,6 @@ section {
     overflow: hidden;
     font-family: 'Poiret One', cursive;
     transition: 1s ease-in-out;
-}
-
-#projects #projects-container .project:hover:nth-child(1) {
-    transform: translateX(-50%) skewX(10deg);
-}
-
-#projects #projects-container .project:hover:nth-child(2) {
-    transform: translateX(-50%) skewX(-10deg);
-}
-
-#projects #projects-container .project:hover:nth-child(3) {
-    transform: translateX(-50%) skew(10deg, -10deg);
 }
 
 #projects #projects-container .project .node {
@@ -446,5 +434,13 @@ section {
 
     #skills #carousel-container #carousel .side {
         transform: translate(-50%, -50%) rotateY(calc( (var(--i) - 1) * (360/15) * 1deg )) translateZ(50vw);
+    }
+
+    #projects #projects-container {
+        flex-direction: row;
+    }
+
+    #contact ul {
+        flex-direction: row;
     }
 }
