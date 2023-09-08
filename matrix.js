@@ -1,7 +1,7 @@
 // function that draws a row of the matrix
 function drawBinaryMatrixRow(container, context, drop_locations, font_size) {
     // fill container
-    context.fillStyle = "rgba(100, 99, 115, 0.3)";
+    context.fillStyle = "rgba(30, 30, 48, 0.3)";
     context.fillRect(0, 0, container.width, container.height);
 
     // fill container with matrix elements
@@ -19,11 +19,11 @@ function drawBinaryMatrixRow(container, context, drop_locations, font_size) {
 // draw the matrix rain
 function drawBinaryMatrixRain() {
     // get matrix canvas
-    const container = document.querySelector("canvas");
+    const container = document.querySelector("#matrix canvas");
     const context = container.getContext("2d");
     // set width and height of canvas
     container.width = window.innerWidth;
-    container.height = window.innerHeight;
+    container.height = window.innerHeight * 4;
     // set matrix attributes
     let font_size = 30;
     let num_cols = container.width/font_size;

@@ -1,41 +1,46 @@
-// functions to add/remove active class from an element
-function addActive(element) {
+function activate(element) {
     element.classList.add("active");
 }
 
-function removeActive(element) {
+function deActivate(element) {
     element.classList.remove("active");
 }
 
-// site logic
+function inSection(section) {
+    return section.scrollTop <= window.scrollY < (section.scrollTop + section.offsetHeight);
+}
+
+// sections
+const startSection = document.getElementById("start");
+const aboutSection = document.getElementById("about");
+const skillsSection = document.getElementById("skillsets");
+const projectsSection = document.getElementById("projects");
+const contactSection = document.getElementById("contacts");
+
+// site scroll behavior
 window.onload = function() {
-    // Handle site's initial page
-    const default_page = document.getElementById("home");
-    const navbar = document.querySelector("nav");
-    navbar.addEventListener("click", () => {
-        removeActive(default_page);
-    });
+    window.addEventListener(
+        "scroll",
+        () => {
+            // handle scroll for visible section
 
-    // Handle carousels
-    let carousel_index = 0;
-    const carousel_indexes = document.querySelectorAll("#projects .carousel .nav .index");
-    const carousel_slides = document.querySelectorAll("#projects .carousel .slide");
+            if (inSection(startSection)) {
 
-    carousel_indexes.forEach((element, index) => {
-        element.addEventListener("click", () => {
-            // update the active index
-            removeActive(carousel_indexes[carousel_index]);
-            addActive(element);
-            carousel_index = index;
+                // handle the mouse animation
+                document.body.style.setProperty(
+                    "--scroll",
+                    window.scrollY / startSection.offsetHeight
+                );
 
-            // update the slides
-            let shift = (index) * -100;
-            carousel_slides.forEach((slide) => {
-                slide.style.transform = `translateX(${shift}%)`;
-            })
-        })
-    });
+            } else if (inSection(aboutSection)) {
+                
+            } else if (inSection(skillsSection)) {
 
-    // set the first index to be active
-    addActive(carousel_indexes[0]);
+            } else if (inSection(projectsSection)) {
+
+            } else if (inSection(contactSection)) {
+
+            }
+        }
+    );
 }

@@ -16,45 +16,32 @@
 
     <!-- content -->
     <body>
+        <!-- matrix -->
+        <div id = "matrix">
+            <canvas></canvas>
+        </div>
 
-        <!-- navigation menu -->
-        <nav>
-            <a href = "#about" class="material-symbols-outlined">
-                person
-                <span class="label">About</span>
-            </a>
-            <a href = "#skillsets" class="material-symbols-outlined">
-                engineering
-                <span>Skillsets</span>
-            </a>
-            <a href = "#projects" class="material-symbols-outlined">
-                deployed_code
-                <span>Projects</span>
-            </a>
-            <a href = "#contact" class="material-symbols-outlined">
-                contact_mail
-                <span>Contact</span>
-            </a>
-        </nav>
-
-        <!-- home(index) page -->
-        <section id = "home" class="active">
-            <div class="section-main courier-new luminescent-white">
-                <div>Nice to meet you.</div>
-                I'm Irene, a
-                <div class="typed-text-container">
-                    <div class="typed-text" style="--word-count: 18;">Software Developer</div>
+        <!-- start page -->
+        <section id = "start">
+            <div id = "icon-container">
+                <div id = "scroll-icon" class="expanding-fade">
+                    <span id = "up-down" class = "material-symbols-outlined">unfold_more</span>
+                    <span id = "mouse" class = "material-symbols-outlined">mouse</span>
                 </div>
             </div>
         </section>
 
-        <!-- about page -->
+        <!-- about section -->
         <section id = "about">
-            <div class="courier-new luminescent-white font-larger-500 fluctuating-fragments">
-                <div class="frag-big"></div>
-                <div class="frag-med"></div>
-                <div class="frag-small"></div>
-                <div class="text">
+            <h1 class = "section-title">About Me</h1>
+            <div id = "intro-container">
+                <div id = "intro" class = "courier-new">
+                    <div id = "photo">
+                        <img src = "assets/ProfilePhoto.png" />
+                    </div>
+                    Nice to meet you.
+                    I'm Irene, a Software Developer.
+                    <br/><br/>
                     I am currently working towards a degree specializing in Computer Science 
                     at the University of Alberta and am set to graduate next year.
                     During my academic journey, I've spent my time learning about 
@@ -69,132 +56,144 @@
                     and explore new horizons.
                 </div>
             </div>
+
+            <div class = "wave-space"></div>
+            <div class = "wave" style = "--wave-width: 170;">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+                </svg>
+            </div>
         </section>
 
-        <!-- skillsets page -->
-        <section id = "skillsets">
-            <div id="matrix">
-                <canvas></canvas>
+        <section id = "skills">
+            <h1 class = "section-title">My Skills</h1>
+            
+            <div id = "carousel-container">
+                <div id = "carousel">
+                    <div class = "side" style = "--i:1;">
+                        <span>Python</span>
+                    </div>
+                    <div class = "side" style = "--i:2;">
+                        <span>C/C++</span>
+                    </div>
+                    <div class = "side" style = "--i:3;">
+                        <span>C#</span>
+                    </div>
+                    <div class = "side" style = "--i:4;">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class = "side" style = "--i:5;">
+                        <span>Java</span>
+                    </div>
+                    <div class = "side" style = "--i:6;">
+                        <span>Julia</span>
+                    </div>
+                    <div class = "side" style = "--i:7;">
+                        <span>HTML</span>
+                    </div>
+                    <div class = "side" style = "--i:8;">
+                        <span>CSS</span>
+                    </div>
+                    <div class = "side" style = "--i:9;">
+                        <span>SQL</span>
+                    </div>
+                    <div class = "side" style = "--i:10;">
+                        <span>MongoDB</span>
+                    </div>
+                    <div class = "side" style = "--i:11;">
+                        <span>Firebase Firestore</span>
+                    </div>
+                    <div class = "side" style = "--i:12;">
+                        <span>ASP.NET Core</span>
+                    </div>
+                    <div class = "side" style = "--i:13;">
+                        <span>Object Oriented Programming</span>
+                    </div>
+                    <div class = "side" style = "--i:14;">
+                        <span>Data Structures</span>
+                    </div>
+                    <div class = "side" style = "--i:15;">
+                        <span>Algorithms</span>
+                    </div>
+                </div>
             </div>
 
-            <div class = "luminescent-white poiret">
-                <ul>
-                    <li>
-                        <span>Python</span>
-                    </li>
-                    <li>
-                        <span>C/C++</span>
-                    </li>
-                    <li>
-                        <span>C#</span>
-                    </li>
-                    <li>
-                        <span>Java</span>
-                    </li>
-                    <li>
-                        <span>Javascript</span>
-                    </li>
-                    <li>
-                        <span>Julia</span>
-                    </li>
-                    <li>
-                        <span>HTML</span>
-                    </li>
-                    <li>
-                        <span>CSS</span>
-                    </li>
-                    <li>
-                        <span>SQL</span>
-                    </li>
-                    <li>
-                        <span>MongoDB</span>
-                    </li>
-                    <li>
-                        <span>Firebase Firestore</span>
-                    </li>
-                    <li>
-                        <span>ASP.NET Core</span>
-                    </li>
-                    <li>
-                        <span>Object Oriented Programming</span>
-                    </li>
-                    <li>
-                        <span>Data Structures</span>
-                    </li>
-                    <li>
-                        <span>Algorithms</span>
-                    </li>
-                </ul>
+            <div class = "wave-space"></div>
+            <div class = "wave" style = "--wave-width: 300;">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+                </svg>
             </div>
         </section>
 
         <!-- projects page -->
         <section id = "projects">
-            <div class="carousel">
-                
-                <div class="slide">
-                    <img src="assets/BugTracker.png" />
-                    <div class="card">
-                        <div class="circle" style="--bg-color-1: #c9caff; --bg-color-2: #a093ff;"></div>
-                        <div class="content poiret">
-                            <h2>Bug Tracker</h2>
+
+            <h1 class = "section-title">My Projects</h1>
+
+            <div id = "projects-container">
+                <div class = "project" style = "--color-1: #f5f5f5; --color-2: #4d4b68;">
+                    <div class = "node">
+                        <img src = "assets/BugTracker.png" />
+                        <h2>Bug Tracker</h2>
+                    </div>
+                    <div class = "content">
+                        <h2>Bug Tracker</h2>
                             <p>
                                 Coded using the ASP.NET Core framework and following an MVC design pattern,
                                 this bug tracking web application offers a streamlined solution to 
                                 handle issues that crop up during post-product release.
                             </p>
-                            <a href="https://github.com/IreneRSun/BugTracker" style="--color: #a093ff;">Check It Out</a>
-                        </div>
-                        <img src="assets/BugTracker.png" />
+                        <a href="https://github.com/IreneRSun/BugTracker">Check It Out</a>
                     </div>
                 </div>
     
-                <div class="slide">
-                    <img src="assets/WeatherApp.png" />
-                    <div class="card">
-                        <div class="circle" style="--bg-color-1: #fcd39a; --bg-color-2: #fcb69f;"></div>
-                        <div class="content poiret">
-                            <h2>Weather Web App</h2>
+                <div class = "project" style = "--color-1: #f5f5f5; --color-2: #554b68;">
+                    <div class = "node">
+                        <img src = "assets/WeatherApp.png" />
+                        <h2>Weather Web App</h2>
+                    </div>
+                    <div class = "content">
+                        <h2>Weather Web App</h2>
                             <p>
                                 This unique weather web application uses HTML, CSS, and Javascript
-                                to visually play the weather in a game-like interface.
+                                to visually play the weather in a game-like interside.
                             </p>
-                            <a href="https://github.com/IreneRSun/CatInTheCity" style="--color: #fcb69f;">Check It Out</a>
-                        </div>
-                        <img src="assets/WeatherApp.png" />
+                        <a href="https://github.com/IreneRSun/CatInTheCity">Check It Out</a>
                     </div>
                 </div>
-
-                <div class="slide">
-                    <img src="assets/QRHunter.png" />
-                    <div class="card">
-                        <div class="circle" style="--bg-color-1: #a8fc41; --bg-color-2: #6ebc18;"></div>
-                        <div class="content poiret">
-                            <h2>QR Mobile App</h2>
+    
+                <div class = "project" style = "--color-1: #f5f5f5; --color-2: #634b68;">
+                    <div class = "node">
+                        <img src = "assets/QRHunter.png" />
+                        <h2>QR Hunter</h2>
+                    </div>
+                    <div class = "content">
+                        <h2>QR Hunter</h2>
                             <p>
                                 This group project was a collaborative project designed in Android Studio.
                                 In this mobile Android game, users scan QR codes and 
                                 compete with other players in the leaderboard.
                             </p>
-                            <a href="https://github.com/CMPUT301W23T09/QRHunter" style="--color: #6ebc18;">Check It Out</a>
-                        </div>
-                        <img src="assets/QRHunter.png" />
+                        <a href="https://github.com/CMPUT301W23T09/QRHunter">Check It Out</a>
                     </div>
                 </div>
-
-                <div class="nav">
-                    <div class="index"></div>
-                    <div class="index"></div>
-                    <div class="index"></div>
-                </div>
-
             </div>
 
+            <div class = "wave-space"></div>
+            <div class = "wave" style = "--wave-width: 100;">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+                </svg>
+            </div>
         </section>
 
         <!-- contact page -->
         <section id = "contact">
-            <ul class="times-new-roman">
+
+            <h1 class = "section-title">Contact Me</h1>
+
+            <ul class="times-new-roman exo">
                 <li>
                     <i class="fa fa-github" aria-hidden="true"></i>
                     <p>IreneRSun</p>
