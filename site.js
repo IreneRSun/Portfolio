@@ -7,15 +7,23 @@ function deActivate(element) {
 }
 
 function inSection(section) {
-    return section.scrollTop <= window.scrollY < (section.scrollTop + section.offsetHeight);
+    return section.offsetTop <= window.scrollY && window.scrollY < (section.offsetTop + section.offsetHeight);
+}
+
+function setScrollPercent(section, propertyName) {
+    let scrollPercent = (window.scrollY - section.offsetTop) / section.offsetHeight;
+    document.body.style.setProperty(
+        propertyName,
+        scrollPercent
+    );
 }
 
 // sections
 const startSection = document.getElementById("start");
 const aboutSection = document.getElementById("about");
-const skillsSection = document.getElementById("skillsets");
+const skillsSection = document.getElementById("skills");
 const projectsSection = document.getElementById("projects");
-const contactSection = document.getElementById("contacts");
+const contactsSection = document.getElementById("contacts");
 
 // site scroll behavior
 window.onload = function() {
@@ -23,23 +31,10 @@ window.onload = function() {
         "scroll",
         () => {
             // handle scroll for visible section
-
             if (inSection(startSection)) {
-
-                // handle the mouse animation
-                document.body.style.setProperty(
-                    "--scroll",
-                    window.scrollY / startSection.offsetHeight
-                );
-
+                setScrollPercent(startSection, "--scroll-start");
             } else if (inSection(aboutSection)) {
-                
-            } else if (inSection(skillsSection)) {
-
-            } else if (inSection(projectsSection)) {
-
-            } else if (inSection(contactSection)) {
-
+                setScrollPercent(aboutSection, "--scroll-about");
             }
         }
     );

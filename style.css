@@ -76,7 +76,7 @@ section {
     fill: #483544;
 }
 
-#contact {
+#contacts {
     background: linear-gradient(0deg, rgba(186,141,126,1) 0%, rgba(72,53,68,1) 100%);
 }
 
@@ -117,7 +117,7 @@ section {
     animation: expanding-fade 1s linear;
     animation-play-state: paused;
     animation-fill-mode: both;
-    animation-delay: calc(var(--scroll) * -2s);
+    animation-delay: calc(var(--scroll-start) * -2s);
 }
 
 @keyframes up-down {
@@ -150,6 +150,15 @@ section {
     perspective: 1500px;
 }
 
+@keyframes shift {
+    0% {
+        transform: scale(0.75) translateY(-20%) rotateY(-30deg) rotateX(30deg) translateZ(3rem);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 #about #intro-container #intro {
     width: 80vw;
     height: auto;
@@ -158,14 +167,12 @@ section {
     padding: 5%;
     text-align: center;
     background: rgba(255,255,255,0.25);
-    transform: scale(0.75) translateY(-20%) rotateY(-30deg) rotateX(30deg) translateZ(3rem);
     box-shadow: 5px 7.5px 20px rgba(255,255,255,0.6);
-    transition: 1s ease-in-out;
     backdrop-filter: blur(2px);
-}
-
-#about #intro-container #intro:hover {
-    transform: scale(1);
+    animation: shift 1s ease-in-out;
+    animation-play-state: paused;
+    animation-fill-mode: both;
+    animation-delay: calc(var(--scroll-about) * -5s);
 }
 
 #about #intro-container #intro #photo {
@@ -291,7 +298,7 @@ section {
     position: relative;
     width: 100%;
     height: 100%;
-    background: linear-gradient(0deg, var(--color-1) 0%, var(--color-2) 100%);
+    background: linear-gradient(0deg, rgba(77,75,104,1) 0%, rgba(245,245,245,1) 100%);
     clip-path: circle(calc(var(--proj-width)/3) at center);
     transition: 1s;
 }
@@ -339,7 +346,7 @@ section {
 #projects #projects-container .project .content a {
     padding: 10px 30px;
     background: white;
-    color: var(--color-2);
+    color: #4d4b68;
     border-radius: 10px;
     display: inline-block;
     text-decoration: none;
@@ -350,20 +357,20 @@ section {
 }
 
 /** contact blocks */
-#contact {
+#contacts {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-#contact ul {
+#contacts ul {
     display: flex;
     flex-direction: column;
     list-style: none;
 }
 
-#contact ul li {
+#contacts ul li {
     position: relative;
     display: inline-block;
     width: 30vh;
@@ -381,11 +388,11 @@ section {
     transition: 0.5s;
 }
 
-#contact ul li:hover {
+#contacts ul li:hover {
     transform: translateY(-30px);
 }
 
-#contact ul li:hover i {
+#contacts ul li:hover i {
     background: linear-gradient(180deg, rgba(207,178,156,1) 0%, rgba(53,58,81,1) 60%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -393,7 +400,7 @@ section {
     color: rgba(100, 99, 115,1);
 }
 
-#contact ul li::before {
+#contacts ul li::before {
     content: "";
     position: absolute;
     top: 0;
@@ -405,11 +412,11 @@ section {
     transition: 0.5s;
 }
 
-#contact ul li:hover::before {
+#contacts ul li:hover::before {
     transform: skewX(45deg) translateX(-50vh);
 }
 
-#contact ul li p { 
+#contacts ul li p { 
     position: absolute;
     top: 50%;
     left: 50%;
@@ -421,7 +428,7 @@ section {
     transition: 0s;
 }
 
-#contact ul li:hover p {
+#contacts ul li:hover p {
     opacity: 1;
     transition: 2s;
 }
@@ -440,7 +447,7 @@ section {
         flex-direction: row;
     }
 
-    #contact ul {
+    #contacts ul {
         flex-direction: row;
     }
 }
