@@ -437,6 +437,10 @@ section {
 
 /** if not on mobile */
 @media screen and (min-width: 900px) {
+    #skills #carousel-container {
+        perspective: 100vw;
+    }
+
     #skills #carousel-container #carousel {
         animation-duration: 50s;
     }
@@ -456,6 +460,6 @@ section {
 
 @media screen and (min-width: 1500px) {
     #skills #carousel-container {
-        perspective: 80vw;
+        perspective: 70vw;
     }
 }
