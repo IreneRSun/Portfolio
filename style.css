@@ -452,7 +452,19 @@ section {
         flex-direction: row;
     }
 
+    #projects #projects-container .content h2, #projects #projects-container .node h2 {
+        font-size: 5vh;
+    }
+
+    #projects #projects-container .content p, #projects #projects-container .content a {
+        font-size: 3vh;
+    }
+
     #contacts ul {
         flex-direction: row;
+    }
+
+    #contacts ul li p {
+        font-size: 5vh;
     }
 }
