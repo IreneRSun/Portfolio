@@ -198,7 +198,6 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    perspective: 150vw;
     perspective-origin: top;
 }
 
@@ -237,7 +236,7 @@ section {
 }
 
 #skills #carousel-container #carousel .side span {
-    font-size: 100%;
+    font-size: 3vh;
     font-family: 'Bungee Hairline', cursive;
     line-height: 100%;
     font-weight: 100;
@@ -437,10 +436,6 @@ section {
 
 /** if not on mobile */
 @media screen and (min-width: 900px) {
-    #skills #carousel-container {
-        perspective: 100vw;
-    }
-
     #skills #carousel-container #carousel {
         animation-duration: 50s;
     }
@@ -449,17 +444,15 @@ section {
         transform: translate(-50%, -50%) rotateY(calc( (var(--i) - 1) * (360/15) * 1deg )) translateZ(50vw);
     }
 
+    #skills #carousel-container #carousel .side span {
+        font-size: 5vh;
+    }
+
     #projects #projects-container {
         flex-direction: row;
     }
 
     #contacts ul {
         flex-direction: row;
-    }
-}
-
-@media screen and (min-width: 1500px) {
-    #skills #carousel-container {
-        perspective: 70vw;
     }
 }
