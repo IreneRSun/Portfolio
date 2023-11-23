@@ -5,40 +5,54 @@
     <!-- metadata -->
     <head>
         <title>Online Portfolio - Irene Sun</title>
-        <meta charset = "UTF-8">
-        <meta name = "description" content = "Personal Webpage">
-        <meta name = "author" content = "Irene Sun">
-        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-        <link rel = "stylesheet" href = "style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="UTF-8">
+        <meta name="description" content="Personal Webpage">
+        <meta name="author" content="Irene Sun">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
     </head>
 
-    <!-- content -->
     <body>
-        <!-- matrix -->
-        <div id = "matrix">
-            <canvas></canvas>
+        <!-- menu -->
+        <div class="menu">
+            <button class="menu-btn">
+                <img src="assets/FloralDiamond.svg" />
+            </button>
+            <div class="menu-items">
+                <a href="#home" class="menu-item" style="--delay: 1;">Home</a>
+                <a href="#about" class="menu-item" style="--delay: 2;">About</a>
+                <a href="#skills" class="menu-item" style="--delay: 3;">Skills</a>
+                <a href="#projects" class="menu-item" style="--delay: 4;">Projects</a>
+                <a href="#contacts" class="menu-item" style="--delay: 5;">Contact Me</a>
+            </div>
         </div>
 
-        <!-- start page -->
-        <section id = "start">
-            <div id = "icon-container">
-                <div id = "scroll-icon" class="expanding-fade">
-                    <span id = "up-down" class = "material-symbols-outlined">unfold_more</span>
-                    <span id = "mouse" class = "material-symbols-outlined">mouse</span>
+        <!-- home -->
+        <section id="home">
+            <!-- scroll icon -->
+            <div class="scroll-icon-container">
+                <div class="scroll-icon">
+                    <div class="scroller"></div>
                 </div>
+                <div class="scroll-text">Scroll</div>
             </div>
         </section>
 
-        <!-- about section -->
-        <section id = "about">
-            <h1 class = "section-title">About Me</h1>
-            <div id = "intro-container">
-                <div id = "intro" class = "courier-new">
-                    <div id = "photo">
-                        <img src = "assets/ProfilePhoto.png" />
-                    </div>
+        <!-- about -->
+        <section id="about">
+            <!-- profile section -->
+            <div class="profile-container">
+                <div class="profile-pic">
+                    <img src = "assets/ProfilePhoto.png" />
+                </div>
+                <div class="profile-name" data-aos="fade-right" data-aos-duration="3000">
+                    Irene Sun
+                </div>
+            </div>
+            <!-- about -->
+            <div class="card-stack" data-aos="flip-left">
+                <div class="card-stack-body">
                     Nice to meet you.
                     I'm Irene, a Software Developer.
                     <br/><br/>
@@ -58,164 +72,187 @@
                     Moving forward, I am enthusiastic about channeling my passion and expertise towards tackling new challenges.
                 </div>
             </div>
+        </section>
 
-            <div class = "wave-space"></div>
-            <div class = "wave" style = "--wave-width: 170;">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-                </svg>
+        <!-- skills -->
+        <section id="skills">
+            <h1 class="section-title">My Skills</h1>
+            <div class="skill-cards-container">
+                <ul class="skill-cards">
+                    <li class="skill-card">
+                        <div class="skill-card-body">
+                            <h2>Python</h2>
+                            <img src="assets/Logos/Python.svg" />
+                        </div>
+                    </li>
+                    <li class="skill-card">
+                        <div class="skill-card-body">
+                            <h2>JavaScript</h2>
+                            <img src="assets/Logos/JavaScript.svg" />
+                        </div>
+                    </li>
+                    <li class="skill-card">
+                        <div class="skill-card-body">
+                            <h2>TypeScript</h2>
+                            <img src="assets/Logos/TypeScript.svg" />
+                        </div>
+                    </li>
+                    <li class="skill-card">
+                        <div class="skill-card-body">
+                            <h2>C#</h2>
+                            <img src="assets/Logos/CSharp.svg" />
+                        </div>
+                    </li>
+                    <li class="skill-card">
+                        <div class="skill-card-body">
+                            <h2>C++</h2>
+                            <img src="assets/Logos/C++.svg" />
+                        </div>
+                    </li>
+                    <li class="skill-card">
+                        <div class="skill-card-body">
+                            <h2>Java</h2>
+                            <img src="assets/Logos/Java.svg" />
+                        </div>
+                    </li>
+                    <li class="skill-card">
+                        <div class="skill-card-body">
+                            <h2>HTML</h2>
+                            <img src="assets/Logos/HTML.svg" />
+                        </div>
+                    </li>
+                    <li class="skill-card">
+                        <div class="skill-card-body">
+                            <h2>CSS</h2>
+                            <img src="assets/Logos/CSS.svg" />
+                        </div>
+                    </li>
+                    <li class="skill-card">
+                        <div class="skill-card-body">
+                            <h2>React</h2>
+                            <img src="assets/Logos/React.svg" />
+                        </div>
+                    </li>
+                    <li class="skill-card">
+                        <div class="skill-card-body">
+                            <h2>MySQL</h2>
+                            <img src="assets/Logos/MySQL.svg" />
+                        </div>
+                    </li>
+                    <li class="skill-card">
+                        <div class="skill-card-body">
+                            <h2>MongoDB</h2>
+                            <img src="assets/Logos/MongoDB.svg" />
+                        </div>
+                    </li>
+                    <li class="skill-card">
+                        <div class="skill-card-body">
+                            <h2>Firestore</h2>
+                            <img src="assets/Logos/Firebase.svg" />
+                        </div>
+                    </li>
+                    <li class="skill-card">
+                        <div class="skill-card-body">
+                            <h2>Node JS</h2>
+                            <img src="assets/Logos/NodeJS.svg" />
+                        </div>
+                    </li>
+                    <li class="skill-card">
+                        <div class="skill-card-body">
+                            <h2>jQuery</h2>
+                            <img src="assets/Logos/jQuery.svg" />
+                        </div>
+                    </li>
+                    <li class="skill-card">
+                        <div class="skill-card-body">
+                            <h2>Tailwind CSS</h2>
+                            <img src="assets/Logos/TailwindCSS.svg" />
+                        </div>
+                    </li>
+                    <li class="skill-card">
+                        <div class="skill-card-body">
+                            <h2>ASP.NET Core</h2>
+                            <img src="assets/Logos/DotNetCore.svg" />
+                        </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
-        <section id = "skills">
-            <h1 class = "section-title">My Skills</h1>
-            
-            <div id = "carousel-container">
-                <div id = "carousel">
-                    <div class = "side" style = "--i:1;">
-                        <span>Python</span>
-                    </div>
-                    <div class = "side" style = "--i:2;">
-                        <span>C/C++</span>
-                    </div>
-                    <div class = "side" style = "--i:3;">
-                        <span>C#</span>
-                    </div>
-                    <div class = "side" style = "--i:4;">
-                        <span>JavaScript</span>
-                    </div>
-                    <div class = "side" style = "--i:5;">
-                        <span>Java</span>
-                    </div>
-                    <div class = "side" style = "--i:6;">
-                        <span>Julia</span>
-                    </div>
-                    <div class = "side" style = "--i:7;">
-                        <span>HTML</span>
-                    </div>
-                    <div class = "side" style = "--i:8;">
-                        <span>CSS</span>
-                    </div>
-                    <div class = "side" style = "--i:9;">
-                        <span>SQL</span>
-                    </div>
-                    <div class = "side" style = "--i:10;">
-                        <span>MongoDB</span>
-                    </div>
-                    <div class = "side" style = "--i:11;">
-                        <span>Firebase Firestore</span>
-                    </div>
-                    <div class = "side" style = "--i:12;">
-                        <span>ASP.NET Core</span>
-                    </div>
-                    <div class = "side" style = "--i:13;">
-                        <span>Object Oriented Programming</span>
-                    </div>
-                    <div class = "side" style = "--i:14;">
-                        <span>Data Structures</span>
-                    </div>
-                    <div class = "side" style = "--i:15;">
-                        <span>Algorithms</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class = "wave-space"></div>
-            <div class = "wave" style = "--wave-width: 300;">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-                </svg>
-            </div>
-        </section>
-
-        <!-- projects page -->
-        <section id = "projects">
-
-            <h1 class = "section-title">My Projects</h1>
-
-            <div id = "projects-container">
-                <div class = "project" style = "--i:1;">
-                    <div class = "node">
-                        <img src = "assets/BugTracker.png" />
-                        <h2>Bug Tracker</h2>
-                    </div>
-                    <div class = "content">
-                        <h2>Bug Tracker</h2>
+        <!-- projects, transform with rotate -->
+        <section id="projects">
+            <h1 class="section-title">My Projects</h1>
+            <div class="project-card-container">
+                <ul class="project-cards">
+                    <li class="project-card" style="--i: 1;">
+                        <div class="project-card-body bg-primary h-72">
+                            <h2>Bug Tracker</h2>
                             <p>
                                 Coded using the ASP.NET Core framework and following an MVC design pattern,
                                 this bug tracking web application offers a streamlined solution to 
                                 handle issues that crop up during post-product release.
                             </p>
-                        <a href="https://github.com/IreneRSun/BugTracker">Check It Out</a>
-                    </div>
-                </div>
-    
-                <div class = "project" style = "--i:2;">
-                    <div class = "node">
-                        <img src = "assets/WeatherApp.png" />
-                        <h2>Weather Web App</h2>
-                    </div>
-                    <div class = "content">
-                        <h2>Weather Web App</h2>
+                            <a href="https://github.com/IreneRSun/BugTracker">Check It Out</a>
+                        </div>
+                    </li>
+                    <li class="project-card" style="--i: 2;">
+                        <div class="project-card-body bg-secondary h-72">
+                            <h2>Weather Web App</h2>
                             <p>
                                 This unique weather web application uses HTML, CSS, and Javascript
                                 to visually tell the weather.
                             </p>
-                        <a href="https://github.com/IreneRSun/CatInTheCity">Check It Out</a>
-                    </div>
-                </div>
-    
-                <div class = "project" style = "--i:3;">
-                    <div class = "node">
-                        <img src = "assets/QRHunter.png" />
-                        <h2>QR Hunter</h2>
-                    </div>
-                    <div class = "content">
-                        <h2>QR Hunter</h2>
+                            <a href="https://github.com/IreneRSun/CatInTheCity">Check It Out</a>
+                        </div>
+                    </li>
+                    <li class="project-card" style="--i: 3;">
+                        <div class="project-card-body bg-accent h-72">
+                            <h2>QR Hunter</h2>
                             <p>
                                 This group project was a collaborative project designed in Android Studio.
                                 In this mobile Android game, users scan QR codes and 
                                 compete with other players in the leaderboard.
                             </p>
-                        <a href="https://github.com/CMPUT301W23T09/QRHunter">Check It Out</a>
+                            <a href="https://github.com/CMPUT301W23T09/QRHunter">Check It Out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- contacts -->
+        <section id="contacts">
+            <div class="contacts-container"
+                data-aos="fade-up-right"
+                data-aos-anchor-placement="center-bottom"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+            >
+                <div class="contacts-body">
+                    <h1 class="section-title">Contact Me</h1>
+                    <div>
+                        Icons by <a href="https://icons8.com" class="underline">Icons8</a>
+                    </div>
+                    <div class="flex">
+                        <a href="tel:+15873571506">
+                            <img width="50" height="50" src="https://img.icons8.com/sf-ultralight/50/F2E9E4/smartphone.png" alt="smartphone"/>
+                        </a>
+                        <a href="mailto:irene.rsun@gmail.com">
+                            <img width="50" height="50" src="https://img.icons8.com/sf-ultralight/50/F2E9E4/new-post.png" alt="new-post"/>
+                        </a>
+                        <a href="https://github.com/IreneRSun">
+                            <img width="50" height="50" src="https://img.icons8.com/sf-ultralight/50/F2E9E4/github.png" alt="github"/>
+                        </a>
                     </div>
                 </div>
             </div>
-
-            <div class = "wave-space"></div>
-            <div class = "wave" style = "--wave-width: 100;">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-                </svg>
-            </div>
         </section>
 
-        <!-- contact page -->
-        <section id = "contacts">
-
-            <h1 class = "section-title">Contact Me</h1>
-
-            <ul class="times-new-roman exo">
-                <li>
-                    <i class="fa fa-github" aria-hidden="true"></i>
-                    <p>IreneRSun</p>
-                </li>
-                <li>
-                    <i class="fa fa-phone" aria-hidden="true"></i>
-                    <p>587-357-1506</p>
-                </li>
-                <li>
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                    <p>irene.rsun
-                        @gmail.com</p>
-                </li>
-            </ul>
-        </section>
-
-        <!-- javascript scripts -->
-        <script src = "matrix.js"></script>
-        <script src = "site.js"></script>
-        
     </body>
+
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="index.js"></script>
 
 </html>
