@@ -6,6 +6,11 @@
     --accent: #c9ada7;
     --light: #f2e9e4;
     --dark: #22223b;
+    --primaryTransparent: #4a4e6930;
+    --secondaryTransparent: #9a8c9830;
+    --accentTransparent: #c9ada730;
+    --lightTransparent: #f2e9e430;
+    --darkTransparent: #22223b30;
 }
 
 * {
@@ -148,7 +153,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .profile-pic {
@@ -173,9 +178,22 @@ section {
 }
 
 /** card with stack */
+.card-stack-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
 .card-stack {
     position: relative;
     width: 80%;
+}
+
+.card-stack-body {
+    position: relative;
+    padding: 2rem;
 }
 
 .card-stack::before, .card-stack::after {
@@ -193,7 +211,7 @@ section {
 .card-stack::before, .card-stack::after, .card-stack-body {
     width: 100%;
     height: 100%;
-    background: linear-gradient(var(--dark), var(--secondary));
+    background: linear-gradient(var(--darkTransparent), var(--secondaryTransparent));
     font-size: 1.125rem;
     line-height: 1.75rem;
     border-radius: 1rem;
@@ -201,34 +219,17 @@ section {
     transition: transform 0.5s;
 }
 
-.card-stack-body {
-    position: relative;
-    padding: 2rem;
-}
-
 .card-stack { 
-    transform: translate(0.15rem, 0) rotate(1.5deg); 
+    transform: translate(0.1rem, 0) rotate(1deg); 
 } 
 
 .card-stack::before { 
-    transform: translate(0.15rem, 0) rotate(1.5deg);
+    transform: translate(0.1rem, 0) rotate(1deg);
 } 
 
 .card-stack::after { 
-    transform: translate(0.3rem, 0) rotate(3deg);
+    transform: translate(0.2rem, 0) rotate(2deg);
 }
-
-.card-stack:hover { 
-    transform: translate(-0.1rem, 0) rotate(-1deg); 
-} 
-
-.card-stack:hover::before { 
-    transform: translate(-0.1rem, 0) rotate(-1deg);
-} 
-
-.card-stack:hover::after { 
-    transform: translate(-0.2rem, 0) rotate(-2deg);
-} 
 
 /** skill cards */
 .skill-cards-container {
@@ -259,7 +260,7 @@ section {
     align-items: center;
     width: 100%;
     height: 100%;
-    background: linear-gradient(var(--primary), var(--accent));
+    background: linear-gradient(var(--primaryTransparent), var(--accentTransparent));
     border-radius: 1rem;
     padding: 1rem;
 }
@@ -287,7 +288,7 @@ section {
     position: sticky;
     top: 0;
     width: 66.67%;
-    height: 24rem;
+    min-height: 24rem;
     padding-top: calc(2rem * var(--i) + 3rem);
 }
 
@@ -296,17 +297,38 @@ section {
 .project-card:nth-child(3) { transform: rotate(12deg); }
 
 .project-card-body {
+    backdrop-filter: blur(30px);
     height: 100%;
+    background: linear-gradient(var(--primaryTransparent), #80808030);
     border-radius: 0.5rem;
-    border-color: var(--light);
-    border-style: solid;
-    border-top-width: 0.01rem;
-    border-right-width: 0.01rem;
+    border: 0.01rem solid var(--lightTransparent);
     padding: 2rem;
 }
 
-.project-card:nth-child(2n) .project-card-body { background: linear-gradient(var(--primary), lightsteelblue); }
-.project-card:nth-child(2n+1) .project-card-body { background: linear-gradient(var(--primary), lightblue); }
+.project-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.project-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.project-link {
+    text-decoration: underline;
+}
+
+.project-img {
+    max-width: 50%;
+    max-height: 12rem;
+    padding: 1rem;
+    border: 0.0625rem solid var(--lightTransparent);
+}
 
 /** contacts section */
 #contacts {
@@ -319,7 +341,7 @@ section {
     height: 100vh;
     -webkit-clip-path: polygon(0 100%, 100% 30%, 100% 100%, 0% 100%);
     clip-path: polygon(0 100%, 100% 30%, 100% 100%, 0% 100%);
-    background: linear-gradient(90deg, rgba(34,34,59,0.3), rgba(39,39,81,0.3));
+    background: linear-gradient(90deg, var(--darkTransparent), rgba(39,39,81,0.3));
 }
 
 .contacts-body {
@@ -332,4 +354,11 @@ section {
 
 .underline {
     text-decoration: underline;
+}
+
+/** responsive screen */
+@media only screen and (min-width: 768px) {
+    .skill-cards {
+        grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
 }
