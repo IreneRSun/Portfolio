@@ -307,6 +307,7 @@ section {
 
 .project-info {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
@@ -324,7 +325,7 @@ section {
 }
 
 .project-img {
-    max-width: 50%;
+    max-width: 100%;
     max-height: 12rem;
     padding: 1rem;
     border: 0.0625rem solid var(--lightTransparent);
@@ -360,5 +361,13 @@ section {
 @media only screen and (min-width: 768px) {
     .skill-cards {
         grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
+
+    .project-info {
+        flex-direction: row;
+    }
+
+    .project-img {
+        max-width: 50%;
     }
 }
