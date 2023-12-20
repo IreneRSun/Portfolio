@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Geostar&display=swap');
 
 :root {
     --primary: #4a4e69;
@@ -56,15 +56,19 @@ section {
     position: fixed;
     padding: 1rem;
     z-index: 100;
+    height: 100%;
+    transition: 0.6s;
+}
+
+.menu:focus-within {
+    backdrop-filter: blur(20px);
 }
 
 .menu-items {
-    backdrop-filter: blur(20px);
     display: flex;
     flex-direction: column;
     overflow: hidden;
     visibility: hidden;
-    border-radius: 1rem;
     z-index: 10;
 }
 
@@ -173,7 +177,7 @@ section {
 }
 
 .profile-pic img {
-    width: 110%;
+    height: 110%;
     object-fit: contain;
 }
 
@@ -219,7 +223,6 @@ section {
     background: linear-gradient(var(--darkTransparent), var(--secondaryTransparent));
     font-size: 1.125rem;
     line-height: 1.75rem;
-    border-radius: 1rem;
     border: 0.0625rem solid var(--primary); 
     transition: transform 0.5s;
 }
@@ -266,7 +269,6 @@ section {
     width: 100%;
     height: 100%;
     background: linear-gradient(var(--primaryTransparent), var(--accentTransparent));
-    border-radius: 1rem;
     padding: 1rem;
 }
 
@@ -305,7 +307,6 @@ section {
     backdrop-filter: blur(30px);
     height: 100%;
     background: linear-gradient(var(--primaryTransparent), #80808030);
-    border-radius: 0.5rem;
     border: 0.01rem solid var(--lightTransparent);
     padding: 2rem;
 }
