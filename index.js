@@ -45,11 +45,11 @@ $(document).ready(() => {
         const scAnimation = anime({
             targets: ".skill-card",
             translateY: [-30, 0],
-            scale: [1.5, 1],
+            scale: [1.3, 1],
             opacity: [0, 1],
             duration: 5000,
             delay: function(el, i) { return i * 200; },
-            easing: "spring(1, 80, 10, 0)",
+            easing: "spring(1, 60, 30, 0)",
             elastic: 300,
             autoplay: false
         });
