@@ -9,14 +9,12 @@
         <meta name="description" content="Personal Webpage">
         <meta name="author" content="Irene Sun">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
         <!-- menu -->
-        <input type="checkbox" id="menu-selector" hidden />
-        <div class="menu">
+        <nav class="menu">
             <button class="menu-btn">
                 <img src="assets/FloralDiamond.svg" />
             </button>
@@ -27,10 +25,14 @@
                 <a href="#projects" class="menu-item" style="--delay: 4;">Projects</a>
                 <a href="#contacts" class="menu-item" style="--delay: 5;">Contact Me</a>
             </div>
-        </div>
+        </nav>
 
         <!-- home -->
         <section id="home">
+            <!--  -->
+            <div>
+
+            </div>
             <!-- scroll icon -->
             <div class="scroll-icon-container">
                 <div class="scroll-icon">
@@ -47,12 +49,12 @@
                 <div class="profile-pic">
                     <img src = "assets/ProfilePhoto.png" />
                 </div>
-                <div class="profile-name" data-aos="fade-right" data-aos-duration="3000">
+                <h2 class="profile-name">
                     Irene Sun
-                </div>
+                </h2>
             </div>
             <!-- about -->
-            <div class="card-stack-container" data-aos="fade-left" data-aos-duration="3000">
+            <div class="card-stack-container">
                 <div class="card-stack">
                     <p class="card-stack-body">
                         Nice to meet you.
@@ -255,16 +257,12 @@
         <!-- contacts -->
         <section id="contacts">
             <div class="contacts-container"
-                data-aos="fade-up-right"
-                data-aos-anchor-placement="center-bottom"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="2000"
             >
                 <div class="contacts-body">
                     <h1 class="section-title">Contact Me</h1>
-                    <div>
+                    <p>
                         Icons by <a href="https://icons8.com" class="underline">Icons8</a>
-                    </div>
+                    </p>
                     <div class="flex">
                         <a href="tel:+15873571506">
                             <img width="50" height="50" src="https://img.icons8.com/sf-ultralight/50/F2E9E4/smartphone.png" alt="smartphone"/>
@@ -287,7 +285,7 @@
 
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="index.js"></script>
 
 </html>
