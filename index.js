@@ -48,12 +48,12 @@ $(document).ready(() => {
             scale: [1.3, 1],
             opacity: [0, 1],
             duration: 5000,
-            delay: function(el, i) { return i * 200; },
+            delay: function(el, i) { return i * 130; },
             easing: "spring(1, 60, 30, 0)",
             elastic: 300,
             autoplay: false
         });
-        scrollAnimate($("#skills"), scAnimation, speed=1000, offset=300);
+        scrollAnimate($("#skills"), scAnimation, speed=1000, offset=600);
 
         // contact section
         const csAnimation = anime({
