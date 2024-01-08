@@ -368,6 +368,10 @@ section {
     padding: 2rem;
 }
 
+.contacts-body img:hover {
+    filter: brightness(80%);
+}
+
 .underline {
     text-decoration: underline;
 }
